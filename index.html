@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="elements.js"></script>
+    <script src="script.js" defer></script>
+    <title>Interactive Periodic Table</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Periodic Table</h1>
+        
+        <div class="search-section">
+            <input 
+                type="number" 
+                id="atomic-number" 
+                placeholder="Enter Atomic Number (1-118)" 
+                min="1" 
+                max="118"
+            >
+            <button id="search-btn">Search</button>
+        </div>
+
+        <div id="element-info" class="element-info hidden">
+            <h2 id="element-name"></h2>
+            <div class="info-grid">
+                <div><strong>Symbol:</strong> <span id="element-symbol"></span></div>
+                <div><strong>Atomic Number:</strong> <span id="element-atomic"></span></div>
+                <div><strong>Atomic Mass:</strong> <span id="element-mass"></span></div>
+                <div><strong>Category:</strong> <span id="element-category"></span></div>
+                <div><strong>Electron Configuration:</strong> <span id="element-config"></span></div>
+            </div>
+        </div>
+
+        <div id="periodic-table" class="periodic-table">
+            <!-- Elements will be generated here -->
+        </div>
+    </div>
+</body>
+</html>
