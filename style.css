@@ -1,51 +1,56 @@
-.periodic-table {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 10px;
-  padding: 20px;
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
 }
 
 .element {
-  border-radius: 8px;
-  padding: 10px;
-  text-align: center;
-  transition: transform 0.3s;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    width: 120px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    text-align: center;
 }
 
 .element:hover {
-  transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-.element.alkali {
-  background-color: #f5a623;
+.element h2 {
+    font-size: 24px;
+    color: white;
 }
 
-.element.alkaline-earth {
-  background-color: #7ed321;
+.element p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
 }
 
-.element.transition {
-  background-color: #41729f;
+@media (max-width: 768px) {
+    .element {
+        width: 100px;
+    }
 }
 
-.element.post-transition {
-  background-color: #a41e34;
+@media (max-width: 480px) {
+    .element {
+        width: 80px;
+    }
 }
 
-.element.metalloid {
-  background-color: #f05053;
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f0f0;
+    margin: 0;
+    padding: 0;
 }
 
-.element.non-metal {
-  background-color: #4a90e2;
-}
-
-.element.noble {
-  background-color: #9b59b6;
-}
-
-@media (max-width: 600px) {
-  .periodic-table {
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-  }
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
 }
