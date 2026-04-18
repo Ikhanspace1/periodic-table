@@ -1,0 +1,51 @@
+.periodic-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+
+.element {
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.element:hover {
+  transform: scale(1.1);
+}
+
+.element.alkali {
+  background-color: #f5a623;
+}
+
+.element.alkaline-earth {
+  background-color: #7ed321;
+}
+
+.element.transition {
+  background-color: #41729f;
+}
+
+.element.post-transition {
+  background-color: #a41e34;
+}
+
+.element.metalloid {
+  background-color: #f05053;
+}
+
+.element.non-metal {
+  background-color: #4a90e2;
+}
+
+.element.noble {
+  background-color: #9b59b6;
+}
+
+@media (max-width: 600px) {
+  .periodic-table {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+}
